@@ -1,4 +1,38 @@
 
+## v1.1.1
+
+[compare changes](https://github.com/4sllan/IBAV/compare/v1.1.0...v1.1.1)
+
+### 🚀 Enhancements
+
+- **docs:** Adiciona documentos de governança e conduta ([b8825b2](https://github.com/4sllan/IBAV/commit/b8825b2))
+- **core:** Adiciona configurações de lint e formatação ([810c4b7](https://github.com/4sllan/IBAV/commit/810c4b7))
+- **config:** Adiciona scripts de teste e formatação ([dd8fb52](https://github.com/4sllan/IBAV/commit/dd8fb52))
+- **config:** Adiciona script de lint no package.json ([8b858cb](https://github.com/4sllan/IBAV/commit/8b858cb))
+- **ci:** Adiciona workflow de release e atualiza CIs ([e32f74a](https://github.com/4sllan/IBAV/commit/e32f74a))
+
+### 🩹 Fixes
+
+- **core:** Move renovate.json para a raiz do projeto ([379637c](https://github.com/4sllan/IBAV/commit/379637c))
+- **workflow:** Atualiza versões do Node e PHP no autofix.yml ([9bd2e59](https://github.com/4sllan/IBAV/commit/9bd2e59))
+- **core:** Habilita unrs-resolver no pnpm-workspace ([ac72768](https://github.com/4sllan/IBAV/commit/ac72768))
+
+### 💅 Refactors
+
+- **core:** Mover FUNDING.yml para .github/ ([cb39ea0](https://github.com/4sllan/IBAV/commit/cb39ea0))
+- **core:** Mover FUNDING.yml para .github/ ([cf0635f](https://github.com/4sllan/IBAV/commit/cf0635f))
+- **core:** Atualiza dependências e documentação ([1dccc89](https://github.com/4sllan/IBAV/commit/1dccc89))
+- **config:** Atualiza dependências e bloqueio de pnpm ([54b53ec](https://github.com/4sllan/IBAV/commit/54b53ec))
+- **core:** Atualiza dependências e bloqueio PNPM ([7117af8](https://github.com/4sllan/IBAV/commit/7117af8))
+
+### 🏡 Chore
+
+- **docs:** Mover arquivos de configuração e documentação ([594a4bc](https://github.com/4sllan/IBAV/commit/594a4bc))
+
+### ❤️ Contributors
+
+- Aslan.gama <aslan.gama@sixchains.com.br>
+
 ## v1.1.0
 
 
