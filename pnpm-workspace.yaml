@@ -1,4 +1,4 @@
 allowBuilds:
   esbuild: true
-  unrs-resolver: false
+  unrs-resolver: true
   vue-demi: true
