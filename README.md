@@ -17,5 +17,3 @@ O objetivo é oferecer uma referência aberta, auditável e evolutiva para compr
 * ⚡ Sem dependência de APIs na versão inicial
 
 O IBAV não substitui a Tabela FIPE, mas a utiliza como referência inicial para gerar uma avaliação mais personalizada e transparente.
-
-Se quiser, posso Adaptar para um tom mais institucional, mais técnico ou mais voltado para a comunidade open source.
