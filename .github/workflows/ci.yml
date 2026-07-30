@@ -1,0 +1,47 @@
+name: 🧪 CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  unit:
+    name: 🧩 Unit + Lint + Typecheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🔧 Preparar ambiente Nuxt
+        run: npx nuxi prepare
+
+      - name: 🔧 Preparar ambiente do Playground
+        run: cd playground && npx nuxi prepare
+
+      - name: 🚀 Iniciar Nuxt no Playground
+        run: cd playground && pnpm dev &  # Roda em segundo plano
+
+      - name: ⏳ Aguardar o servidor estar pronto
+        run: sleep 10  # Ajuste o tempo conforme necessário
+
+      - name: Run Unit Tests
+        run: pnpm test
