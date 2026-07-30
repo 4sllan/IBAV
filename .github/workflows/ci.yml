@@ -21,11 +21,11 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: 10
+          version: 11
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -34,11 +34,8 @@ jobs:
       - name: 🔧 Preparar ambiente Nuxt
         run: npx nuxi prepare
 
-      - name: 🔧 Preparar ambiente do Playground
-        run: cd playground && npx nuxi prepare
-
-      - name: 🚀 Iniciar Nuxt no Playground
-        run: cd playground && pnpm dev &  # Roda em segundo plano
+      - name: 🚀 Iniciar Nuxt
+        run: pnpm dev &  # Roda em segundo plano
 
       - name: ⏳ Aguardar o servidor estar pronto
         run: sleep 10  # Ajuste o tempo conforme necessário
