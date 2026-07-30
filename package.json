@@ -3,6 +3,21 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
+  "author": "4sllan (https://github.com/4sllan)",
+  "homepage": "https://4sllan.github.io/IBAV/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4sllan/IBAV.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4sllan/IBAV/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/4sllan"
+    }
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
