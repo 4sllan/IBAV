@@ -1,5 +1,5 @@
-name: 🐞 Bug Report
-description: Report a bug or unexpected behavior
+name: 🐞 Relatar Bug
+description: Relate um bug ou comportamento inesperado no IBAV
 title: "[Bug]: "
 labels: ["bug"]
 assignees: []
@@ -8,43 +8,71 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for helping improve Nuxt Umbu 🙌
-        Please fill in the details below.
+        Obrigado por ajudar a melhorar o IBAV 🙌
+        Por favor, preencha os detalhes abaixo.
 
   - type: dropdown
-    id: strategy
+    id: module
     attributes:
-      label: Which authentication strategy are you using?
+      label: Qual módulo está afetado?
+      description: Selecione o componente do sistema onde o bug ocorreu
       options:
-        - Laravel Sanctum
-        - Laravel Passport
+        - Cálculo do VJV (Valor Justo do Veículo)
+        - Cálculo do IVB (Índice de Valor Brasileiro)
+        - Formulário de entrada
+        - Página de resultados
+        - Compartilhamento
+        - Outro
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Describe the bug
-      description: What happened?
-      placeholder: Explain the issue clearly.
+      label: Descrição do bug
+      description: O que aconteceu?
+      placeholder: Explique o problema claramente.
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
+      label: Passos para reproduzir
       placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error...
+        1. Acesse...
+        2. Preencha o campo...
+        3. Clique em...
+        4. Veja o erro...
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-      placeholder: What should have happened?
+      label: Comportamento esperado
+      placeholder: O que deveria ter acontecido?
     validations:
       required: true
+
+  - type: textarea
+    id: data
+    attributes:
+      label: Dados utilizados (se aplicável)
+      description: Informe os valores usados no teste
+      placeholder: |
+        Valor FIPE: R$ ...
+        Ano: ...
+        Quilometragem: ...
+        Conservação: ...
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Informações sobre o seu ambiente
+      placeholder: |
+        Navegador: Chrome, Firefox, Safari, etc.
+        Versão do navegador: ...
+        Sistema operacional: Windows, macOS, Linux, etc.
+        Dispositivo: Desktop, Mobile, Tablet
