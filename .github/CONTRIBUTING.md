@@ -1,113 +1,121 @@
-# Contributing to Nuxt Umbu
+# Contribuindo com o IBAV
 
-Thank you for considering contributing to **Nuxt Umbu**!  
-Your help makes this project better for the entire community.
+Obrigado por considerar contribuir com o **IBAV (Instituto Brasileiro de Avaliação Veicular)**!  
+Sua ajuda torna este projeto melhor para toda a comunidade.
 
-This document explains how to contribute with code, documentation, bug reports and improvements.
+Este documento explica como contribuir com código, documentação, relatórios de bugs e melhorias.
 
----
+## Sobre o IBAV
 
-## 📌 Ways to Contribute
+O IBAV é um projeto que visa calcular o **Valor Justo do Veículo (VJV)** utilizando uma metodologia transparente. Diferente da tabela FIPE, que apresenta uma média nacional de preços, o IBAV considera características individuais do veículo para estimar um valor mais próximo da realidade.
 
-You can contribute in several ways:
-
-- 🐛 Reporting bugs
-- 💡 Suggesting new features
-- 📖 Improving documentation
-- 🧪 Writing tests
-- 🔧 Fixing bugs
-- 🚀 Improving performance or security
+O projeto é totalmente independente da FIPE e, nesta primeira versão (MVP), não utiliza APIs externas, permitindo funcionamento offline e baixo custo de manutenção.
 
 ---
 
-## 🐞 Reporting Bugs
+## 📌 Formas de Contribuir
 
-Before opening a new issue:
+Você pode contribuir de várias formas:
 
-1. Search existing issues to avoid duplicates.
-2. Ensure the bug happens in the latest version.
-3. Provide as much detail as possible.
-
-When creating a bug report, include:
-
-- Nuxt version
-- Nuxt Umbu version
-- Laravel version (if applicable)
-- Steps to reproduce
-- Expected behavior
-- Actual behavior
-- Screenshots or logs if possible
+- 🐛 Relatar bugs
+- 💡 Sugerir novas funcionalidades
+- 📖 Melhorar a documentação
+- 🧪 Escrever testes
+- 🔧 Corrigir bugs
+- 🚀 Melhorar performance ou segurança
 
 ---
 
-## 💡 Suggesting Features
+## 🐞 Relatar Bugs
 
-Feature requests are welcome!
+Antes de abrir uma nova issue:
 
-Please include:
+1. Pesquise issues existentes para evitar duplicatas.
+2. Certifique-se de que o bug ocorre na versão mais recente.
+3. Forneça o máximo de detalhes possível.
 
-- A clear description of the feature
-- The problem it solves
-- Possible implementation ideas (optional)
+Ao criar um relatório de bug, inclua:
+
+- Versão do IBAV
+- Versão do Nuxt
+- Navegador e versão (se aplicável)
+- Passos para reproduzir
+- Comportamento esperado
+- Comportamento atual
+- Valores de entrada utilizados (valor FIPE, ano, quilometragem, conservação)
+- Screenshots ou logs se possível
 
 ---
 
-## 🛠 Development Setup
+## 💡 Sugerir Funcionalidades
 
-Clone the repository:
+Sugestões de funcionalidades são bem-vindas! Por favor, verifique o [Roadmap](docs/docs.md#roadmap) na documentação para ver as funcionalidades planejadas.
+
+Ao sugerir uma funcionalidade, inclua:
+
+- Uma descrição clara da funcionalidade
+- O problema que ela resolve
+- Como ela se relaciona com a metodologia do IBAV (cálculos VJV, IVB)
+- Ideias de implementação possíveis (opcional)
+
+---
+
+## 🛠 Configuração de Desenvolvimento
+
+Clone o repositório:
 
 ```bash
-git clone https://github.com/4sllan/nuxt-umbu.git
-cd nuxt-umbu
+git clone https://github.com/4sllan/ibav.git
+cd ibav
 ```
-Install dependencies:
+Instale as dependências:
 
 ```bash
 pnpm install
 ```
-Run the development environment:
+Execute o ambiente de desenvolvimento:
 
 ```bash
 pnpm dev
 ```
 
-## 🌿 Branch Strategy
+## 🌿 Estratégia de Branches
 
-Please follow this workflow:
+Por favor, siga este fluxo:
 
-1. Fork the repository
+1. Faça um fork do repositório
 
-2. Create a new branch from main
+2. Crie um novo branch a partir de main
 
-Example:
+Exemplo:
 
 ```bash
-git checkout -b feat/my-feature
+git checkout -b feat/minha-funcionalidade
 ```
 
-| Type     | Example                    |
-| -------- | -------------------------- |
-| Feature  | `feat/add-sanctum-support` |
-| Fix      | `fix/token-refresh`        |
-| Docs     | `docs/update-auth-flow`    |
-| Refactor | `refactor/auth-module`     |
+| Tipo     | Exemplo                          |
+| -------- | -------------------------------- |
+| Feature  | `feat/add-ivb-calculation`       |
+| Fix      | `fix/mileage-adjustment`         |
+| Docs     | `docs/update-methodology`        |
+| Refactor | `refactor/vjh-formula`           |
 
-## ✍️ Commit Guidelines
+## ✍️ Diretrizes de Commit
 
-We follow Conventional Commits:
+Seguimos Conventional Commits:
 ```text
-type(scope): description
+tipo(escopo): descrição
 ```
 
-Examples:
+Exemplos:
 
 ```text
-feat(auth): add 2FA support
-fix(sanctum): resolve csrf token issue
-docs: update installation guide
+feat(calc): add IVB score calculation
+fix(mileage): resolve adjustment formula
+docs: update methodology guide
 ```
 
-Common commit types:
+Tipos de commit comuns:
 
 - feat
 - fix
@@ -116,35 +124,43 @@ Common commit types:
 - test
 - chore
 
-## 📦 Pull Request Guidelines
+## 📦 Diretrizes de Pull Request
 
-Before submitting a Pull Request, please ensure the following:
+Antes de enviar um Pull Request, certifique-se do seguinte:
 
-- Your code follows the project coding style
-- Documentation is updated when necessary
-- The module builds correctly
+- Seu código segue o estilo de código do projeto
+- A documentação é atualizada quando necessário
+- A aplicação compila corretamente
+- Alterações na metodologia de cálculo são devidamente documentadas e testadas
 
-### PR Checklist
+### Checklist de PR
 
-Before opening your PR, confirm that:
+Antes de abrir seu PR, confirme que:
 
-- [ ] Code compiles without errors
-- [ ] Documentation has been updated (if needed)
-- [ ] No unnecessary files were included
-- [ ] Pull request contains a clear and descriptive explanation
+- [ ] O código compila sem erros
+- [ ] A documentação foi atualizada (se necessário)
+- [ ] Nenhum arquivo desnecessário foi incluído
+- [ ] O pull request contém uma explicação clara e descritiva
+- [ ] Alterações nos cálculos incluem casos de teste com resultados esperados
 
-## 🔐 Security Issues
+## 🔐 Problemas de Segurança
 
-If you discover a security vulnerability, please do not open a public issue.
+Se descobrir uma vulnerabilidade de segurança, por favor, não abra uma issue pública.
 
-Instead, report it privately by contacting the maintainer.
+Em vez disso, relate-a de forma privada entrando em contato com o mantenedor.
 
-## ❤️ Community
+## ❤️ Comunidade
 
-Please be respectful and constructive in discussions.
+Por favor, seja respeitoso e construtivo nas discussões.
 
-We aim to build a welcoming environment for all contributors.
+Nosso objetivo é construir um ambiente acolhedor para todos os contribuidores.
 
-## 🙌 Thank You
+## 🙌 Obrigado
 
-Thank you for helping improve Nuxt Umbu!
+Obrigado por ajudar a melhorar o IBAV!
+
+## 📚 Recursos Adicionais
+
+- [Documentação do Projeto](docs/docs.md) - Metodologia completa e especificações
+- [Roadmap](docs/docs.md#roadmap) - Funcionalidades planejadas e versões futuras
+- [Metodologia](docs/docs.md#metodologia) - Fórmulas de cálculo VJV e IVB
