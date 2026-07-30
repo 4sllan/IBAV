@@ -1,10 +1,14 @@
 blank_issues_enabled: false
 
 contact_links:
-  - name: 💬 Questions & Discussions
-    url: https://github.com/4sllan/nuxt-umbu/discussions
-    about: Please ask and answer questions here.
+  - name: 💬 Perguntas e Discussões
+    url: https://github.com/4sllan/IBAV/discussions
+    about: Por favor, faça e responda perguntas aqui.
 
-  - name: 🔐 Report a Security Vulnerability
-    url: https://github.com/4sllan/nuxt-umbu/security/advisories/new
-    about: Please report security vulnerabilities privately.
+  - name: 🔐 Relatar Vulnerabilidade de Segurança
+    url: https://github.com/4sllan/IBAV/security/advisories/new
+    about: Por favor, relate vulnerabilidades de segurança em privado.
+
+  - name: 📖 Documentação
+    url: https://github.com/4sllan/IBAV/blob/main/docs/docs.md
+    about: Consulte a documentação completa do IBAV.

@@ -1,6 +1,6 @@
-name: 🚀 Feature Request
-description: Suggest a new feature or improvement
-title: "[Feature]: "
+name: 🚀 Solicitação de Funcionalidade
+description: Sugira uma nova funcionalidade ou melhoria
+title: "[Funcionalidade]: "
 labels: ["enhancement"]
 assignees: []
 
@@ -8,47 +8,47 @@ body:
   - type: markdown
     attributes:
       value: |
-        Have an idea to improve Nuxt Umbu? Awesome 🔥
+        Tem uma ideia para melhorar o IBAV? Incrível 🔥
 
   - type: dropdown
-    id: strategy
+    id: version
     attributes:
-      label: Related strategy
+      label: Versão relacionada
       options:
-        - Laravel Sanctum
-        - Laravel Passport
-        - Both
-        - Core module
-        - Documentation
+        - MVP
+        - Versão 2
+        - Versão 3
+        - Metodologia
+        - Documentação
     validations:
       required: true
 
   - type: dropdown
     id: impact
     attributes:
-      label: What area does this impact?
+      label: Qual área isso impacta?
       options:
-        - Authentication flow
-        - Middleware
-        - SSR behavior
-        - Composables
-        - Documentation
-        - DX (Developer Experience)
+        - Cálculo do VJV
+        - Cálculo do IVB
+        - Interface do usuário
+        - Metodologia de avaliação
+        - Documentação
+        - DX (Experiência do Desenvolvedor)
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Describe the feature
-      placeholder: Explain your idea clearly.
+      label: Descreva a funcionalidade
+      placeholder: Explique sua ideia claramente.
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: What problem does this solve?
-      placeholder: Why is this needed?
+      label: Qual problema isso resolve?
+      placeholder: Por que isso é necessário?
     validations:
       required: true
