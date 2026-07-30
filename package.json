@@ -23,7 +23,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest run --reporter=verbose --silent=false",
+    "test:watch": "vitest watch --reporter=verbose --silent=false",
+    "test:debug": "vitest --inspect-brk --reporter=verbose --silent=false",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.120",
