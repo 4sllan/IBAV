@@ -8,12 +8,12 @@ O objetivo é oferecer uma referência aberta, auditável e evolutiva para compr
 
 ## Principais recursos
 
-* 🚗 Cálculo do Valor Justo do Veículo (VJV)
-* 📊 Índice de Valor Brasileiro (IVB)
-* 📉 Ajustes por idade, quilometragem e conservação
-* 🔍 Metodologia transparente e documentada
-* 🧮 Cálculos reproduzíveis e auditáveis
-* 🌐 Projeto open source
-* ⚡ Sem dependência de APIs na versão inicial
+- 🚗 Cálculo do Valor Justo do Veículo (VJV)
+- 📊 Índice de Valor Brasileiro (IVB)
+- 📉 Ajustes por idade, quilometragem e conservação
+- 🔍 Metodologia transparente e documentada
+- 🧮 Cálculos reproduzíveis e auditáveis
+- 🌐 Projeto open source
+- ⚡ Sem dependência de APIs na versão inicial
 
 O IBAV não substitui a Tabela FIPE, mas a utiliza como referência inicial para gerar uma avaliação mais personalizada e transparente.

@@ -68,11 +68,13 @@ Clone o repositório:
 git clone https://github.com/4sllan/ibav.git
 cd ibav
 ```
+
 Instale as dependências:
 
 ```bash
 pnpm install
 ```
+
 Execute o ambiente de desenvolvimento:
 
 ```bash
@@ -93,16 +95,17 @@ Exemplo:
 git checkout -b feat/minha-funcionalidade
 ```
 
-| Tipo     | Exemplo                          |
-| -------- | -------------------------------- |
-| Feature  | `feat/add-ivb-calculation`       |
-| Fix      | `fix/mileage-adjustment`         |
-| Docs     | `docs/update-methodology`        |
-| Refactor | `refactor/vjh-formula`           |
+| Tipo     | Exemplo                    |
+| -------- | -------------------------- |
+| Feature  | `feat/add-ivb-calculation` |
+| Fix      | `fix/mileage-adjustment`   |
+| Docs     | `docs/update-methodology`  |
+| Refactor | `refactor/vjh-formula`     |
 
 ## ✍️ Diretrizes de Commit
 
 Seguimos Conventional Commits:
+
 ```text
 tipo(escopo): descrição
 ```

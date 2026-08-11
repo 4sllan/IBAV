@@ -75,12 +75,12 @@ Sistema calcula:
 
 # Campos de Entrada
 
-| Campo | Tipo |
-|--------|------|
-| Valor FIPE | Número |
-| Ano | Número |
+| Campo         | Tipo   |
+| ------------- | ------ |
+| Valor FIPE    | Número |
+| Ano           | Número |
 | Quilometragem | Número |
-| Conservação | Select |
+| Conservação   | Select |
 
 ---
 
@@ -169,12 +169,12 @@ Acréscimo de:
 
 ## 3. Conservação
 
-| Estado | Ajuste |
-|---------|--------:|
-| Excelente | +3% |
-| Bom | 0% |
-| Regular | -3% |
-| Ruim | -8% |
+| Estado    | Ajuste |
+| --------- | -----: |
+| Excelente |    +3% |
+| Bom       |     0% |
+| Regular   |    -3% |
+| Ruim      |    -8% |
 
 ---
 
@@ -312,24 +312,24 @@ a cada 10.000 km acima da média
 
 ## Conservação
 
-| Estado | Pontos |
-|---------|--------:|
-| Excelente | +30 |
-| Bom | 0 |
-| Regular | -30 |
-| Ruim | -80 |
+| Estado    | Pontos |
+| --------- | -----: |
+| Excelente |    +30 |
+| Bom       |      0 |
+| Regular   |    -30 |
+| Ruim      |    -80 |
 
 ---
 
 # Classificação
 
-| Pontos | Classificação |
-|---------|---------------|
-| 900–1000 | Excelente |
-| 800–899 | Muito Bom |
-| 700–799 | Bom |
-| 600–699 | Regular |
-| abaixo de 600 | Atenção |
+| Pontos        | Classificação |
+| ------------- | ------------- |
+| 900–1000      | Excelente     |
+| 800–899       | Muito Bom     |
+| 700–799       | Bom           |
+| 600–699       | Regular       |
+| abaixo de 600 | Atenção       |
 
 ---
 

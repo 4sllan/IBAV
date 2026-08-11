@@ -3,8 +3,8 @@
 ## Versões Suportadas
 
 | Versão | Suportada |
-|---------|-----------|
-| 0.1.x   | ✅        |
+| ------ | --------- |
+| 0.1.x  | ✅        |
 
 ## Relatando uma Vulnerabilidade
 
@@ -14,7 +14,7 @@ Em vez disso, relate-a privadamente por:
 
 - Abrindo um GitHub Security Advisory
 
-[//]: # (- Ou contatando: security@yourdomain.com)
+[//]: # '- Ou contatando: security@yourdomain.com'
 
 Responderemos dentro de 48 horas.
 
