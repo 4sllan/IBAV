@@ -5,14 +5,14 @@ import { calculateVjv } from '#shared/utils/vjv';
 import { calculateIvb } from '#shared/utils/ivb';
 import { parseVehicleQuery, buildVehicleQuery } from '#shared/utils/vehicle-query';
 
-const currentYear = new Date().getFullYear();
+const currentYear = useState<number>('currentYear', () => new Date().getFullYear());
 const route = useRoute();
 const router = useRouter();
 
 const query = parseVehicleQuery(route.query);
 const form = ref<VehicleInputs>({
   fipeValue: query.fipeValue ?? 0,
-  year: query.year ?? currentYear,
+  year: query.year ?? currentYear.value,
   mileage: query.mileage ?? 0,
   condition: query.condition ?? 'bom',
 });
@@ -41,7 +41,7 @@ const isValid = computed(() => {
   return (
     form.value.fipeValue > 0 &&
     form.value.year > 1900 &&
-    form.value.year <= currentYear &&
+    form.value.year <= currentYear.value &&
     form.value.mileage >= 0
   );
 });
@@ -51,8 +51,8 @@ const result = computed(() => {
     return null;
   }
   return {
-    vjv: calculateVjv(form.value),
-    ivb: calculateIvb(form.value),
+    vjv: calculateVjv(form.value, currentYear.value),
+    ivb: calculateIvb(form.value, currentYear.value),
   };
 });
 
