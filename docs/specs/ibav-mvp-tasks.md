@@ -69,7 +69,7 @@ Criar as funções puras de cálculo de idade, desvalorização, ajuste por km e
 
 ---
 
-## Task 3 — Implementar VJV e IVB
+## Task 3 — ✅ Implementar VJV e IVB
 
 ### Goal
 
@@ -101,7 +101,7 @@ Compor os utilitários base para calcular o Valor Justo do Veículo e o Índice 
 
 ---
 
-## Task 4 — Criar página com formulário e exibição de resultados
+## Task 4 — ✅ Criar página com formulário e exibição de resultados
 
 ### Goal
 
@@ -136,7 +136,7 @@ Construir a interface do usuário com Nuxt UI, formulário e painel de resultado
 
 ---
 
-## Task 5 — Sincronizar formulário com query params para compartilhamento
+## Task 5 — ✅ Sincronizar formulário com query params para compartilhamento
 
 ### Goal
 
@@ -168,7 +168,7 @@ Permitir que o usuário copie e compartilhe uma URL que carregue o mesmo cálcul
 
 ---
 
-## Task 6 — Integração final e verificação
+## Task 6 — ✅ Integração final e verificação
 
 ### Goal
 
