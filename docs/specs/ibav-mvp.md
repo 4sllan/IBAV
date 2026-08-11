@@ -104,6 +104,64 @@ Não existe ainda nenhuma lógica de domínio implementada.
 - **TR5** A página deve ser SSR-safe (sem hydration mismatch).
 - **TR6** Query params devem sincronizar o estado do formulário via `useRoute().query` e `useRouter()`.
 - **TR7** Cobertura de testes unitários acima de 80% para os utilitários matemáticos.
+- **TR8** Em todos os arquivos `.vue` (SFC), o bloco `<script setup>` deve ser declarado **antes** do bloco `<template>`.
+
+## Code Organization Rules (Nuxt 4)
+
+O projeto utiliza **Nuxt 4** e suas convenções devem ser respeitadas para organização de imports, utilitários e compartilhamento de código.
+
+### Verificar antes de implementar
+
+Antes de modificar qualquer arquivo relacionado a imports, organização de código ou compartilhamento de utilitários:
+
+- Inspecionar a estrutura atual do projeto.
+- Verificar onde componentes, composables, tipos e utilitários estão localizados.
+- Identificar como os imports estão sendo utilizados.
+- Verificar dependências ou referências entre `shared/` e `app/`.
+
+Só então implementar as alterações necessárias. Nunca assumir a estrutura do projeto sem verificar primeiro.
+
+### Imports de `shared/`
+
+Projetos Vue/Nuxt **não precisam importar diretamente arquivos de `shared/`** quando o código puder ser utilizado por mecanismos nativos do Nuxt 4 ou quando existir uma alternativa apropriada dentro de `app/`.
+
+- Evitar imports relativos do tipo `import { foo } from '../../shared/utils'` em páginas, componentes ou composables.
+- Antes de criar ou manter um import de `shared/`, verificar se ele é realmente necessário.
+
+### Utilitários específicos da aplicação
+
+Funções utilitárias específicas da aplicação Vue/Nuxt devem preferencialmente ficar em `app/utils/` e ser utilizadas pelo mecanismo de auto-import do Nuxt, quando aplicável.
+
+```
+app/
+├── components/
+├── composables/
+├── pages/
+├── utils/
+└── ...
+```
+
+Evitar importar manualmente utilitários que o Nuxt possa disponibilizar por auto-import.
+
+### Sem duplicação
+
+Antes de criar uma nova função utilitária:
+
+- Procurar se ela já existe em `app/utils/`.
+- Procurar implementações equivalentes no projeto.
+- Verificar se existe implementação compartilhada que realmente precise ser reutilizada.
+- Não criar cópias da mesma função em diretórios diferentes sem necessidade.
+
+### Fluxo obrigatório
+
+Para qualquer alteração relacionada a essa regra:
+
+1. **Verificar** a estrutura existente.
+2. **Analisar** a melhor localização e opções nativas do Nuxt 4.
+3. **Identificar** a solução menos acoplada.
+4. **Validar** impactos e dependências.
+5. **Implementar** a alteração.
+6. **Validar** o resultado (lint, testes, build).
 
 ## Data Flow
 

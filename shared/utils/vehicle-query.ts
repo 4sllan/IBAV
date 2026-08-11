@@ -3,7 +3,7 @@ import type { VehicleCondition, VehicleInputs } from '#shared/types/valuation';
 const VALID_CONDITIONS: VehicleCondition[] = ['excelente', 'bom', 'regular', 'ruim'];
 
 export function parseVehicleQuery(
-  query: Record<string, string | string[]>
+  query: Record<string, unknown>
 ): Partial<VehicleInputs> {
   const parsed: Partial<VehicleInputs> = {};
 

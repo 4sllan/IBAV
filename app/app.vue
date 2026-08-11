@@ -1,42 +1,5 @@
-<template>
-  <div class="min-h-screen bg-gray-50 p-6">
-    <div class="mx-auto max-w-xl space-y-6">
-      <h1 class="text-2xl font-bold">IBAV - Avaliação Veicular</h1>
-
-      <div class="space-y-4">
-        <div>
-          <label for="fipe" class="block text-sm font-medium">Valor FIPE</label>
-          <UInput id="fipe" v-model.number="form.fipeValue" type="number" min="0" step="1000" />
-        </div>
-
-        <div>
-          <label for="year" class="block text-sm font-medium">Ano</label>
-          <UInput id="year" v-model.number="form.year" type="number" />
-        </div>
-
-        <div>
-          <label for="mileage" class="block text-sm font-medium">Quilometragem</label>
-          <UInput id="mileage" v-model.number="form.mileage" type="number" min="0" />
-        </div>
-
-        <div>
-          <label for="condition" class="block text-sm font-medium">Conservação</label>
-          <USelect id="condition" v-model="form.condition" :options="conditionOptions" />
-        </div>
-      </div>
-
-      <div v-if="result" data-testid="result" class="rounded-lg bg-white p-4 shadow">
-        <p>Valor FIPE: {{ formatMoney(form.fipeValue) }}</p>
-        <p>Valor Justo: {{ formatMoney(result.vjv) }}</p>
-        <p>IVB: {{ result.ivb.points }} pontos ({{ result.ivb.label }})</p>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
 import type { VehicleCondition, VehicleInputs } from '#shared/types/valuation';
 import { calculateVjv } from '#shared/utils/vjv';
 import { calculateIvb } from '#shared/utils/ivb';
@@ -102,3 +65,39 @@ function formatMoney(value: number): string {
   return currencyFormatter.format(value);
 }
 </script>
+
+<template>
+  <div class="min-h-screen bg-gray-50 p-6">
+    <div class="mx-auto max-w-xl space-y-6">
+      <h1 class="text-2xl font-bold">IBAV - Avaliação Veicular</h1>
+
+      <div class="space-y-4">
+        <div>
+          <label for="fipe" class="block text-sm font-medium">Valor FIPE</label>
+          <UInput id="fipe" v-model.number="form.fipeValue" type="number" min="0" step="1000" />
+        </div>
+
+        <div>
+          <label for="year" class="block text-sm font-medium">Ano</label>
+          <UInput id="year" v-model.number="form.year" type="number" />
+        </div>
+
+        <div>
+          <label for="mileage" class="block text-sm font-medium">Quilometragem</label>
+          <UInput id="mileage" v-model.number="form.mileage" type="number" min="0" />
+        </div>
+
+        <div>
+          <label for="condition" class="block text-sm font-medium">Conservação</label>
+          <USelect id="condition" v-model="form.condition" :options="conditionOptions" />
+        </div>
+      </div>
+
+      <div v-if="result" data-testid="result" class="rounded-lg bg-white p-4 shadow">
+        <p>Valor FIPE: {{ formatMoney(form.fipeValue) }}</p>
+        <p>Valor Justo: {{ formatMoney(result.vjv) }}</p>
+        <p>IVB: {{ result.ivb.points }} pontos ({{ result.ivb.label }})</p>
+      </div>
+    </div>
+  </div>
+</template>
