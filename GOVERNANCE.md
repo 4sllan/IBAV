@@ -25,6 +25,7 @@ O IBAV é um projeto open source que visa calcular o **Valor Justo do Veículo (
 ### Transparência
 
 A metodologia do IBAV é pública, documentada e versionada para garantir:
+
 - Auditabilidade dos cálculos
 - Evolução contínua e colaborativa
 - Confiança dos usuários
@@ -56,6 +57,7 @@ O sistema considera quatro fatores principais:
 ### Índice de Valor Brasileiro (IVB)
 
 Pontuação de 0 a 1000 pontos que classifica o veículo:
+
 - 900–1000: Excelente
 - 800–899: Muito Bom
 - 700–799: Bom
@@ -69,6 +71,7 @@ Pontuação de 0 a 1000 pontos que classifica o veículo:
 ### Versionamento
 
 A metodologia do IBAV é versionada para garantir:
+
 - Rastreabilidade de mudanças
 - Estabilidade para usuários
 - Possibilidade de rollback se necessário
@@ -76,6 +79,7 @@ A metodologia do IBAV é versionada para garantir:
 ### Atualizações
 
 Mudanças na metodologia devem:
+
 - Ser documentadas no CHANGELOG.md
 - Manter compatibilidade quando possível
 - Ser comunicadas claramente aos usuários
@@ -115,6 +119,7 @@ Mudanças na metodologia devem:
 ## Licenciamento
 
 O projeto IBAV é open source para garantir:
+
 - Acesso livre à metodologia
 - Contribuição da comunidade
 - Melhoria contínua através de colaboração
@@ -125,6 +130,7 @@ O projeto IBAV é open source para garantir:
 ## Contribuição
 
 Contribuições são bem-vindas e devem seguir:
+
 - O código de conduta do projeto (CODE_OF_CONDUCT.md)
 - As diretrizes de contribuição (CONTRIBUTING.md)
 - O processo de issues e pull requests do GitHub
@@ -134,6 +140,7 @@ Contribuições são bem-vindas e devem seguir:
 ## Contato e Suporte
 
 Para dúvidas, sugestões ou reportar problemas:
+
 - Abra uma issue no GitHub
 - Consulte a documentação em docs/docs.md
 - Revise o CHANGELOG.md para atualizações recentes
